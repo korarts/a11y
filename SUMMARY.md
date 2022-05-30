@@ -2,7 +2,8 @@
 
 * [🚦 Visual Studio Code 접근성 설정](README.md)
   * [즐겨찾기 참조 링크 사이트](visual-studio-code/undefined.md)
-  * [센스리더 단축키 목록](visual-studio-code/undefined-1.md)
+  * [특수문자 영문 한글 읽기](visual-studio-code/undefined-1.md)
+  * [센스리더 단축키 목록](visual-studio-code/undefined-2.md)
 * [HTML5](html5/README.md)
   * [🥇 🐱‍🏍 1장. HTML5](html5/1-.-html5.md)
   * [🥇 🐱‍🏍 02장. Layout](html5/02-.-layout.md)
