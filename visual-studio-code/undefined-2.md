@@ -9,7 +9,7 @@
 | ------------- | ----------------------------------------------- |
 | 이전 글자로        | Numpad4, Alt+Shift+M                            |
 | 현재 글자 읽기      | Alt+Numpad5, Alt+Shift+,(컴마)                    |
-| 다음 글자로        | Numpad6, Alt+Shift+.(쩜)                         |
+| 다음 글자로        | <p>Numpad6, Alt+Shift+.(쩜)<br>(VS. 자동 수정)</p>   |
 | 이전 단어로        | Ctrl+Numpad4, Alt+Shift+J, Insert+Numpad4       |
 | 현재 단어 읽기      | Ctrl+Numpad5, Alt+Shift+K, Insert+Numpad5       |
 | 다음 단어로        | Ctrl+Numpad6, Alt+Shift+L, Insert+Numpad6       |
