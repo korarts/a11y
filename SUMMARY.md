@@ -4,7 +4,7 @@
   * [즐겨찾기 참조 링크 사이트](visual-studio-code/undefined.md)
   * [특수문자 영문 한글 읽기](visual-studio-code/undefined-1.md)
   * [센스리더 단축키 목록](visual-studio-code/undefined-2.md)
-  * [크롬 단축키 목록](visual-studio-code/chrome_shortcuts.md.md)
+  * [크롬 단축키 목록](visual-studio-code/chrome_shortcuts.md)
   * [Git 설치와 설정](undefined/git_cli_cmd.md)
 * [HTML5](html5/README.md)
   * [🥇 🐱‍🏍 1장. HTML5](html5/1-.-html5.md)
