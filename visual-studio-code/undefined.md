@@ -1,5 +1,26 @@
 # 즐겨찾기 참조 링크 사이트
 
+## 정보 접근성 관련 사이트
+{% embed url="https://nuli.navercorp.com/seminar" %}
+국내/외 전문가들과 실무자들과의 만남
+{% endembed %}
+
+{% embed url="https://nuli.navercorp.com/seminar/s09th" %}
+2021년 제 9회 널리 웨비나
+{% endembed %}
+
+{% embed url="https://www.w3.org/TR" %}
+W3C 표준화 및 초안
+{% endembed %}
+
+{% embed url="https://www.w3.org/TR/wai-aria-practices" %}
+2022년 5월 WAI-ARIA Practices
+{% endembed %}
+
+{% embed url="https://www.w3.org/WAI/ARIA/apg/patterns" %}
+WAI-ARIA Patterns
+{% endembed %}
+
 
 ## 최신 트랜드 사이트
 {% embed url="https://io.google/2022/" %}
@@ -7,7 +28,7 @@
 {% endembed %}
 
 {% embed url="https://io.google/2022/products/accessibility/" %}
-구글 IO 접근성관련 기
+구글 IO 접근성관련 기술정보 제공
 {% endembed %}
 
 {% embed url="https://2021.stateofcss.com/en-US/features/accessibility" %}
