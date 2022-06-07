@@ -50,6 +50,10 @@ Mozilla Developer Network
 W3C Schools
 {% endembed %}
 
+{% embed url="https://caniuse.com" %}
+어떤 브라우저에서 지원하는지 필수 체크
+{% endembed %}
+
 {% embed url="https://www.koreahtml5.kr" %}
 교육자료와 자료실 및 진단도구
 {% endembed %}
