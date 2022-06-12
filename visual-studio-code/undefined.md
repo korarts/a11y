@@ -50,6 +50,23 @@ Mozilla Developer Network
 W3C Schools
 {% endembed %}
 
+{% embed url="https://entitycode.com/#common-content" %}
+특수 문자의 HTML Entity 코드
+{% endembed %}
+
+{% embed url="https://www.toptal.com/designers/htmlarrows/punctuation/" %}
+특수문자의 HTML Entity 코드 안내
+{% endembed %}
+
+### HTML 엔터티란 무엇입니까?
+
+엔터티는 예약된 문자를 구현하거나 키보드로 쉽게 입력할 수 없는 문자를 표현하는 데 사용됩니다.\
+ISO-8859-1은 대부분의 브라우저에서 기본 문자 집합입니다.\
+ISO-8859-1의 처음 128자는 원래 ASCII 문자 집합(0-9의 숫자, 영문 대문자 및 소문자, 일부 특수 문자)입니다.\
+ISO-8859-1의 상위 부분(코드 160-255)에는 서유럽 국가에서 사용되는 문자와 일반적으로 사용되는 일부 특수 문자가 포함되어 있습니다.\
+HTML 기호 엔티티에는 수학 기호, 그리스 문자, 다양한 화살표, 기술 기호 및 모양이 포함됩니다.\
+엔티티 이름은 대소문자를 구분합니다.
+
 {% embed url="https://caniuse.com" %}
 어떤 브라우저에서 지원하는지 필수 체크
 {% endembed %}
