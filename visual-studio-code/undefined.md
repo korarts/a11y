@@ -50,6 +50,20 @@ Mozilla Developer Network
 W3C Schools
 {% endembed %}
 
+{% embed url="https://html.spec.whatwg.org/" %}
+HTML Spec
+{% endembed %}
+
+{% embed url="https://www.geeksforgeeks.org/html/?ref=shm" %}
+HTML 및 기타 프로그래밍 참조사이트
+{% endembed %}
+
+{% embed url="https://www.geeksforgeeks.org/html-cheat-sheet-a-basic-guide-to-html/?ref=shm" %}
+HTML Cheet Sheet 및 기타 참조
+{% endembed %}
+
+
+
 {% embed url="https://entitycode.com/#common-content" %}
 특수 문자의 HTML Entity 코드
 {% endembed %}
@@ -79,10 +93,28 @@ HTML 기호 엔티티에는 수학 기호, 그리스 문자, 다양한 화살표
 웹 접근성과 웹표
 {% endembed %}
 
+{% embed url="https://www.codingfactory.net/html-tutorial-table-of-contents" %}
+코딩 팩토리
+{% endembed %}
+
+{% embed url="https://www.pinkcoding.com/class/web/HTML/" %}
+HTML / CSS / Javascript / Jquery / ReactJs / MySql 등의 강의 사이
+{% endembed %}
+
+
+
 {% embed url="https://google.github.io/styleguide/htmlcssguide.html" %}
 구글의 HTML CSS 가이드
 {% endembed %}
 
 {% embed url="https://hangul.thefron.me/" %}
 의미없는 한글문자 생성기
+{% endembed %}
+
+{% embed url="https://noonnu.cc/" %}
+무료로 쓸 수 있는 한글 폰트와 웹폰
+{% endembed %}
+
+{% embed url="https://ko.wikipedia.org/" %}
+지식정보 위키피디
 {% endembed %}
