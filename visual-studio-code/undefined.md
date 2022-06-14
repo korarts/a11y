@@ -90,7 +90,11 @@ HTML 기호 엔티티에는 수학 기호, 그리스 문자, 다양한 화살표
 {% endembed %}
 
 {% embed url="https://seulbinim.github.io/WSA/accessibility.html" %}
-웹 접근성과 웹표
+웹 접근성과 웹표준 강의
+{% endembed %}
+
+{% embed url="https://wsss.tistory.com/" %}
+Sample 유형
 {% endembed %}
 
 {% embed url="https://www.codingfactory.net/html-tutorial-table-of-contents" %}
@@ -99,6 +103,10 @@ HTML 기호 엔티티에는 수학 기호, 그리스 문자, 다양한 화살표
 
 {% embed url="https://www.pinkcoding.com/class/web/HTML/" %}
 HTML / CSS / Javascript / Jquery / ReactJs / MySql 등의 강의 사이
+{% endembed %}
+
+{% embed url="https://webzz.tistory.com/" %}
+web Reference Tistory
 {% endembed %}
 
 
