@@ -1,6 +1,7 @@
 # 즐겨찾기 참조 링크 사이트
 
 ## 정보 접근성 관련 사이트
+
 {% embed url="https://nuli.navercorp.com/seminar" %}
 국내/외 전문가들과 실무자들과의 만남
 {% endembed %}
@@ -21,8 +22,8 @@ W3C 표준화 및 초안
 WAI-ARIA Patterns
 {% endembed %}
 
-
 ## 최신 트랜드 사이트
+
 {% embed url="https://io.google/2022/" %}
 구글IO의 최신 기술을 공부할 수 있는 사이트
 {% endembed %}
@@ -41,14 +42,87 @@ CSS 2021
 
 ## UI/UX Coding Guide
 
-{% embed url="https://google.github.io/styleguide/htmlcssguide.html" %}
-구글의 HTML CSS 가이드
+{% embed url="https://developer.mozilla.org/ko/" %}
+Mozilla Developer Network
+{% endembed %}
+
+{% embed url="https://www.w3schools.com/" %}
+W3C Schools
+{% endembed %}
+
+{% embed url="https://html.spec.whatwg.org/" %}
+HTML Spec
+{% endembed %}
+
+{% embed url="https://www.geeksforgeeks.org/html/?ref=shm" %}
+HTML 및 기타 프로그래밍 참조사이트
+{% endembed %}
+
+{% embed url="https://www.geeksforgeeks.org/html-cheat-sheet-a-basic-guide-to-html/?ref=shm" %}
+HTML Cheet Sheet 및 기타 참조
 {% endembed %}
 
 
 
+{% embed url="https://entitycode.com/#common-content" %}
+특수 문자의 HTML Entity 코드
+{% endembed %}
+
+{% embed url="https://www.toptal.com/designers/htmlarrows/punctuation/" %}
+특수문자의 HTML Entity 코드 안내
+{% endembed %}
+
+### HTML 엔터티란 무엇입니까?
+
+엔터티는 예약된 문자를 구현하거나 키보드로 쉽게 입력할 수 없는 문자를 표현하는 데 사용됩니다.\
+ISO-8859-1은 대부분의 브라우저에서 기본 문자 집합입니다.\
+ISO-8859-1의 처음 128자는 원래 ASCII 문자 집합(0-9의 숫자, 영문 대문자 및 소문자, 일부 특수 문자)입니다.\
+ISO-8859-1의 상위 부분(코드 160-255)에는 서유럽 국가에서 사용되는 문자와 일반적으로 사용되는 일부 특수 문자가 포함되어 있습니다.\
+HTML 기호 엔티티에는 수학 기호, 그리스 문자, 다양한 화살표, 기술 기호 및 모양이 포함됩니다.\
+엔티티 이름은 대소문자를 구분합니다.
+
+{% embed url="https://caniuse.com" %}
+어떤 브라우저에서 지원하는지 필수 체크
+{% endembed %}
+
+{% embed url="https://www.koreahtml5.kr" %}
+교육자료와 자료실 및 진단도구
+{% endembed %}
+
+{% embed url="https://seulbinim.github.io/WSA/accessibility.html" %}
+웹 접근성과 웹표준 강의
+{% endembed %}
+
+{% embed url="https://wsss.tistory.com/" %}
+Sample 유형
+{% endembed %}
+
+{% embed url="https://www.codingfactory.net/html-tutorial-table-of-contents" %}
+코딩 팩토리
+{% endembed %}
+
+{% embed url="https://www.pinkcoding.com/class/web/HTML/" %}
+HTML / CSS / Javascript / Jquery / ReactJs / MySql 등의 강의 사이
+{% endembed %}
+
+{% embed url="https://webzz.tistory.com/" %}
+web Reference Tistory
+{% endembed %}
 
 
 
+{% embed url="https://google.github.io/styleguide/htmlcssguide.html" %}
+구글의 HTML CSS 가이드
+{% endembed %}
 
+{% embed url="https://hangul.thefron.me/" %}
+의미없는 한글문자 생성기
+{% endembed %}
 
+{% embed url="https://noonnu.cc/" %}
+무료로 쓸 수 있는 한글 폰트와 웹폰
+{% endembed %}
+
+{% embed url="https://ko.wikipedia.org/" %}
+지식정보 위키피디
+{% endembed %}
