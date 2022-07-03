@@ -1,9 +1,68 @@
 # Git 설치
+* https://git-scm.com에서 다운로드
+* 64-bit Git for Windows Setup
+* 
 [https://git-scm.com/book/ko/v2/시작하기-Git-설치](https://git-scm.com/book/ko/v2/시작하기-Git-설치)
 [git-scm 다운로드](https://git-scm.com/download)
 [git Document Book](https://git-scm.com/book/ko/v2)
 
+# Git 개요
+* 가장 인기있는 오픈 소스 버전 관리 시스템(Version Control System, Source Control Management)
+* 저장소(Repository) : 각각의 다른 버전을 저장(Versions)
+* 비교(Comparision) : 각각의 버전을 비교
+* 협업(Collaboration) : 개발자 간의 협업을 허용, 공통 코드 기반의 공유 
+* 책임(Accountability) : 모든 사용자와 수행의 정확한 변경 사항을 추적
+* 2005년에 Linus Torvalds가 Git Linus Torvalds을 만들어 시작
 
+# Git 장동방식
+1. 수정(Modified) : 사용자가 변경한 상태
+2. 준비(Staged) : 커밋하지 않은 준비된 상태(Staging area) : git add
+3. 커밋(Committed) : 수정된 내용을 Git DB에 커밋 : git commit
+
+# Git Bash
+* 광범위하게 작동되는 Bash terminal Command (명령줄 도구)
+  
+# Git Bash 명령어
+```
+	$ pwd : 현재 경로  출력
+	Ctrl + L : command 창 초기화
+	Ctrl + A / Ctrl + E : 명령어 맨 앞 / 맨 뒤로 이동
+	$ cd [이동할 하위 디렉토리 명] : 디렉토리 이동 ($ cd d:\html)
+	$ mkdir [현재 경로에서 생성할 디렉토리] : 디렉토리 생성
+	$ rm -r [삭제할 디렉토리명] : 디렉토리 삭제
+	$ dir | ls : 디렉토리 목록 조회
+	$ cat [파일명] : 파일 내용 조회
+	$ git remote add origin [자신의 Github 원격저장소 주소] : 리모트 저장소에 Github 원격저장소 연결정보 추가
+	$ git remote show [리모트 저장소 이름] : 리모트 저장소 연결정보 조회
+	$ git config --get remote.[리모트 저장소 이름].url : 리모트 저장소 연결정보 url만 조회
+	$ git remote set-url [리모트 저장소 이름] [url] : 리모트 저장소 연결정보 url 수정
+	$ git remote -v : 리모트 저장소 연결조회
+	$ git remote rename [기존 저장소 이름] [변경할 저장소 이름] : 리모트 저장소 이름 변경
+	$ git remote rm [삭제할 저장소 이름] : 리모트 저장소 삭제
+	$ git push [리모트 저장소 이름] --delete [삭제할 브랜치 이름] : 리모트 브랜치 삭제
+
+	$ git status : 깃허브 커밋 상태 조회
+	$ git log : 커밋 이력 상세 조회
+	$ git log --oneline : 커밋 이력 중 커밋 ID, 타이틀만 조회
+	$ git log --oneline --decorate --graph --all : 모든 브랜치 커밋 이력 조회
+	$ git log --[파일명.파일확장자] : 특정 파일 커밋 이력 조회
+	$ git reflog	: 모든 commit, reset 등 로그 이력 조회
+	$ git reset --hard HEAD@{헤드숫자} : 조회된 헤드숫자를 확인하여 해당 시점으로 파일 복구
+
+	$ git pull [리모트 저장소 이름] [브랜치 이름] : 리모트 저장소 변경사항 불러오기 - PULL
+	$ git push [리모트 저장소 이름] [브랜치 이름] : 리모트 저장소 변경사항 올리기 - PUSH
+	$ git commit -m '[커밋설명]' : 변경사항 저장 - COMMIT
+	$ git reset --soft HEAD^ : 커밋 취소 후 해당 파일 staged 상태로 working directory에 보존
+	$ git reset --mixed HEAD^ : 커밋 취소 후 해당 파일 unstaged 상태로 working directory에 보존
+	$ git reset HEAD~2 : 마지막 두 개의 커밋을 취소
+	$ git reset --hard HEAD^ : 모든 변경사항 되돌리기. --hard는 강제로 되돌리므로 되돌릴 수 없다.
+	$ git checkout --<파일명> : 특정 파일 변경사항만 되돌리기
+
+
+	$ git branch : 브랜치 확인
+	$ git branch -r : 서버 브랜치 확인
+
+```
 
 
 # Git CLI 명령어
@@ -16,6 +75,13 @@
 
 
 ## 1. config 설정
+* 도움말 항목 (명령어 사용법)
+	```
+	$git help
+	$git help -a
+	$git help -g
+	clear : 화면 지움
+	```
 * 현재 설정정보 조회
 	```
 	$git config --global --list  
@@ -25,11 +91,13 @@
 * <b style="color:crimson">(필수) 사용자명 등록 / 변경</b>
 	```
 	$git config --global user.name "사용자 아이디"
+	$git config --global --list
 	```
 
 * <b style="color:crimson">(필수) 이메일 주소 등록 / 변경 </b>
 	```
 	$git config --global user.email "사용자 이메일주소"
+	$git config --global --list
 	```
 
 * <b style="color:crimson">(필수) 프로젝트 하나에서만 사용자명 등록 / 변경</b>
@@ -51,30 +119,67 @@
 	```
 	$git config --unset user.email  "이메일주소"
 	```
+	
+* config 수정
+	```
+	vi ~/.gitconfig
+	```
+
+
+# Git Bash 예시
+```
+	$ pwd
+	$ cd d:\html5
+	$ pwd
+	$ mkdir myGitRep
+	$ ls -l
+	$ cd myGitRep
+	$ git init
+	$ ls -al
+	$ echo "처음으로 만들어 보는 명령어의 텍스트 파일" >> testFile1.txt
+	$ ls
+	$ cat testFile1.txt
+	$ (Ctrl + L)
+	$ vi testFile2.txt
+	vi :  (i)
+	vi : 두번째로 만들어 보는 텍스트 파일 
+	vi : (:wq)
+	$ cat testFile2.txt
+	$ git status : 기본 옵션
+	$ git status --long	: 기본 옵션
+	$ git status -s
+
+
+```
+
+# root 초기화 다운로드
+http://www.initializr.com/
+* 데모용으로 구성된 반응형 초기화 문서
+* 데모용으로 구성된 Bootstrap 초기화 문서
 
 
 ## 2. git 상태
 * 현재 git 버전 확인
 	```
-	$git --version  
-	```
+		$git --version  
+		```
 
-* 파일 상태 확인
-	```
-	$git status  
-	```
+	* 파일 상태 확인
+		```
+		$git status  
+		```
 
-* 내 컴퓨터 로컬폴더에 서버 저장소 주소 알려주기
-	```
-	$git remote 
-	```
+	* 내 컴퓨터 로컬폴더에 서버 저장소 주소 알려주기
+		```
+		$git remote 
+		```
 
-* 마지막 commit 된 내역 조회 명령어
-	```
-	$git log 
-	```
+	* 마지막 commit 된 내역 조회 명령어
+		```
+		$git log 
+		```
 
----
+	---
 ## 3. init or clone
 * 기존 프로젝트의 디렉토리에 git 저장소로 만들기(.git이라는 하위 디렉토리 생성)
 	```
