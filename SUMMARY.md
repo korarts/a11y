@@ -4,6 +4,7 @@
   * [즐겨찾기 참조 링크 사이트](visual-studio-code/undefined.md)
   * [특수문자 영문 한글 읽기](visual-studio-code/undefined-1.md)
   * [센스리더 단축키 목록](visual-studio-code/undefined-2.md)
+  * [NVDA 단축키](readme/nvda.md)
   * [크롬 단축키 목록](visual-studio-code/chrome\_shortcuts.md)
   * [정보통신(웹)접근성 관련 코딩](readme/undefined-3/README.md)
     * [\<blink> 사용 금지](readme/undefined-3/less-than-blink-greater-than.md)
