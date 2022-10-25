@@ -105,6 +105,32 @@ git push -u origin main
 
 
 
+## Permission Error 403
+
+```
+// 제어판 > 사용자 계정 > 자격 증명 관리자
+Windows 자격 증명 > GitHub 관련 자격을 제거하고 다시 생성함.
+
+// git clone  깃주소 붙여넣기 할 경우 Permission denied (publickey) Error
+git config --global --unset core.excludesfile
+
+git config --global --unset user.name
+git config --global --unset user.email
+
+git config --global user.name "사용자 아이디"
+git config --global user.email "사용자 이메일"
+ssh-keygen
+//powershell
+Get-Content ~/.ssh/id_rsa.pub | Set-Clipboard
+
+#error permission denied (publickey),
+#github error message - permission denied (publickey),
+#how to solve permission denied (publickey) error when using git
+
+
+
+```
+
 
 
 ### 1. config 설정
