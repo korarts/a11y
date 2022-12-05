@@ -20,6 +20,14 @@ description: Regular expression, Regexp, regex, rational expression, 정규 표�
 시각적 표현식 테스터
 {% endembed %}
 
+{% embed url="https://www.w3schools.com/jsref/jsref_obj_regexp.asp" %}
+w3Schools
+{% endembed %}
+
+{% embed url="https://www.regexplanet.com/" %}
+프로그램 언어별 정규식
+{% endembed %}
+
 
 
 정규 표현식(正規表現式, [영어](https://ko.wikipedia.org/wiki/%EC%98%81%EC%96%B4): regular expression, 간단히 regexp[\[1\]](https://ko.wikipedia.org/wiki/%EC%A0%95%EA%B7%9C\_%ED%91%9C%ED%98%84%EC%8B%9D#cite\_note-1) 또는 regex, rational expression)[\[2\]](https://ko.wikipedia.org/wiki/%EC%A0%95%EA%B7%9C\_%ED%91%9C%ED%98%84%EC%8B%9D#cite\_note-Mitkov2003-2)[\[3\]](https://ko.wikipedia.org/wiki/%EC%A0%95%EA%B7%9C\_%ED%91%9C%ED%98%84%EC%8B%9D#cite\_note-Lawson2003-3) 또는 정규식(正規式)은 특정한 규칙을 가진 문자열의 집합을 표현하는 데 사용하는 [형식 언어](https://ko.wikipedia.org/wiki/%ED%98%95%EC%8B%9D\_%EC%96%B8%EC%96%B4)이다. 정규 표현식은 많은 [텍스트 편집기](https://ko.wikipedia.org/wiki/%ED%85%8D%EC%8A%A4%ED%8A%B8\_%ED%8E%B8%EC%A7%91%EA%B8%B0)와 [프로그래밍 언어](https://ko.wikipedia.org/wiki/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D\_%EC%96%B8%EC%96%B4)에서 문자열의 검색과 치환을 위해 지원하고 있으며, 특히 [펄](https://ko.wikipedia.org/wiki/%ED%8E%84)과 [Tcl](https://ko.wikipedia.org/wiki/Tcl)은 언어 자체에 강력한 정규 표현식을 구현하고 있다.
@@ -390,3 +398,49 @@ form.addEventListener('submit', (event) => {
   testInfo(input)
 })
 ```
+
+
+
+
+
+## URL Hash link
+
+```
+/(#[A-Za-z0-9-._~:/?#[\]@!$&'()*+,;=%]*)?/
+
+#newsletter
+https://some.url.com#ccccd
+https://some.url.com?thing=blah&thong=%25#newsletter
+https://some.url.com
+https://some.url.com?thing=blah&thong=%25
+https://some.url.com?thing=blah&thong=%25/
+https://some.url.com/
+https://some.url.com/#newsletter
+https://some.url.com/#newsletter?thing=blah&thong=%25
+https://some.url.com/#newsletter?thing=blah&thong=%25/
+
+http://some.url.com
+http://some.url.com?thing=blah&thong=%25
+http://some.url.com?thing=blah&thong=%25/
+http://some.url.com/
+http://some.url.com/#newsletter
+http://some.url.com/#newsletter?thing=blah&thong=%25
+http://some.url.com/#newsletter?thing=blah&thong=%25/
+
+
+```
+
+
+
+## URL 올바른 값만 체크
+
+```
+/^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/
+
+https://www.google.com
+http://www.google.com
+www.google.com
+htt://www.google.com
+://www.google.com
+```
+
