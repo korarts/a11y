@@ -139,7 +139,7 @@ console.log(text.match(regexpFoxQuality));
 
 이스케이프 되지 않은 문자열을 이미 가지고 있을 땐 [`String.replace`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global\_Objects/String/replace)를 활용해 이스케이프를 해줄 수 있습니다.
 
-```
+```javascript
 function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') // $&은 일치한 문자열 전체를 의미
 }
@@ -174,7 +174,7 @@ Copy to Clipboard
 
 아래의 예제에서는, 문자열에서 일치하는 부분을 찾기 위해 `exec()` 메서드를 사용합니다.
 
-```
+```javascript
 const myRe = /d(b+)d/g;
 const myArray = myRe.exec('cdbbdbsbz');
 ```
@@ -183,7 +183,7 @@ Copy to Clipboard
 
 만약 정규 표현식 객체의 속성에 접근할 필요가 없으면 아래와 같이 짧게 쓸 수도 있습니다.
 
-```
+```javascript
 const myArray = /d(b+)d/g.exec('cdbbdbsbz');
 // 'cdbbdbsbz'.match(/d(b+)d/g); 와 비슷하지만,
 // 'cdbbdbsbz'.match(/d(b+)d/g)의 반환 값은 [ 'dbbd' ]인 반면
@@ -196,7 +196,7 @@ Copy to Clipboard
 
 정규 표현식을 문자열에서 만들고 싶으면 아래처럼 사용할 수도 있습니다.
 
-```
+```javascript
 const myRe = new RegExp('d(b+)d', 'g');
 const myArray = myRe.exec('cdbbdbsbz');
 ```
@@ -216,7 +216,7 @@ Copy to Clipboard
 
 위 예제의 두 번째 형태처럼, 정규 표현식 객체를 변수에 대입하지 않고도 사용할 수 있습니다. 하지만, 이러면 매 사용마다 정규 표현식 객체가 새로 생성되며, 업데이트되는 속성에 접근할 수 없습니다. 다음과 같은 코드를 생각해보겠습니다.
 
-```
+```javascript
 const myRe = /d(b+)d/g;
 const myArray = myRe.exec('cdbbdbsbz');
 console.log(`lastIndex의 값은 ${myRe.lastIndex}`);
@@ -228,7 +228,7 @@ Copy to Clipboard
 
 그러나 위의 코드 대신 아래 코드를 사용하게 되면...
 
-```
+```javascript
 const myArray = /d(b+)d/g.exec('cdbbdbsbz');
 console.log(`lastIndex의 값은 ${/d(b+)d/g.lastIndex}`);
 
@@ -255,7 +255,7 @@ Copy to Clipboard
 
 플래그는 다음과 같은 구문으로 정규 표현식에 지정할 수 있습니다.
 
-```
+```javascript
 const re = /pattern/flags;
 ```
 
@@ -263,7 +263,7 @@ Copy to Clipboard
 
 생성자를 사용할 경우 이렇게 지정합니다.
 
-```
+```javascript
 const re = new RegExp('pattern', 'flags');
 ```
 
@@ -273,7 +273,7 @@ Copy to Clipboard
 
 예를 들어, `re = /\w+\s/g`는 한 개 이상의 글자와 그 뒤의 공백 하나를, 문자열 전체에 대해 탐색합니다.
 
-```
+```javascript
 const re = /\w+\s/g;
 const str = 'fee fi fo fum';
 const myArray = str.match(re);
@@ -286,7 +286,7 @@ Copy to Clipboard
 
 아래 코드는...
 
-```
+```javascript
 const re = /\w+\s/g;
 ```
 
@@ -294,7 +294,7 @@ Copy to Clipboard
 
 이렇게 생성자를 사용하도록 바꿀 수도 있습니다.
 
-```
+```javascript
 const re = new RegExp('\\w+\\s', 'g');
 ```
 
@@ -308,7 +308,7 @@ Copy to Clipboard
 
 [`RegExp.prototype.exec()`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global\_Objects/RegExp/exec) 메서드와 `g` 플래그를 사용하면, 일치한 부분 문자열들과 각각의 인덱스를 하나씩 순차적으로 반환합니다.
 
-```
+```javascript
 const str = 'fee fi fo fum'
 const re = /\w+\s/g
 

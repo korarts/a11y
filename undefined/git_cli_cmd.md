@@ -7,13 +7,7 @@
 
 
 
-[https://git-scm.com/book/ko/v2/시작하기-Git-설치](https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EC%84%A4%EC%B9%98)&#x20;
-
-[git-scm 다운로드](https://git-scm.com/download)
-
-[git Document Book](https://git-scm.com/book/ko/v2)
-
-{% embed url="https://docs.github.com/ko" %}
+[https://git-scm.com/book/ko/v2/시작하기-Git-설치](https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EC%84%A4%EC%B9%98) [git-scm 다운로드](https://git-scm.com/download) [git Document Book](https://git-scm.com/book/ko/v2)
 
 ## Git 개요
 
