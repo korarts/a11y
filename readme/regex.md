@@ -48,6 +48,109 @@ w3Schools
 
 ## 정규 표현식 만들기
 
+
+
+### 그룹과 범위 지정
+
+|(Vertical Line) : 또는(or)
+
+()(괄호) : 그룹
+
+\[]\(대괄호) : 문자셋, 괄호안의 모든 문자들
+
+\[^] (대괄호의 Carrot) : 부정문, 대괄호의 어떤 문자가 아닐때 지정
+
+(?:) (괄호 그룹안의 물음표와 콜론) : 찾지만 기억하지 않음
+
+
+
+### 한정자(변수의 범위를 지정, 명제와  범위)&#x20;
+
+?(물음표) : 없거나 있거나(Zero or one)
+
+\*(별표) : 없거나 있거나 많거나(zero or More)
+
+\+(더하기) : 하나 또는 많이 ( one or More)
+
+{n} (중괄호 안의 수) : n번 반복
+
+{min, } : 최소&#x20;
+
+{min, max} : 최소와 최대
+
+
+
+### 경계의 유형 (Boundary-type)
+
+\b : 단어와 단어 사이
+
+\B : 단어의 경계가 아닌 부분
+
+^ : 줄의 시작
+
+$ : 줄의 끝부분
+
+
+
+### 문자열 선택(Character classes)
+
+\ : 특수 문자가 아닌 문자
+
+. : 어떤 글자(줄바꿈 제외)
+
+\d : 숫자(0123456789)
+
+\D : 숫자가 아님
+
+\w : word 문자
+
+\W : word 문자가 아님
+
+\s : space 공백
+
+\S : space 공백 아님
+
+
+
+
+
+* ^ : 문자열 또는 줄의 시작을 지정한다. \
+  ^A 는 A로 시작하는 단어\
+  ^\n 는 줄바꿈으로 시작하는 줄단위\
+  ^\t 는 탭으로 시작하는 단어\
+  <mark style="color:red;">\[^A] 는 Not의 의미</mark>로 A로 시작하지 않는 단어\
+  ^\[^\t].\* 는 탭으로 시작하지 않는 줄을 선택
+* $ : 문자열 또는 줄의 끝에서 지정한다. \
+  A$ 는 A로 끝나는 줄을 선택\
+  :$ 는 :로 끝나는 부분을 선택
+* .(마침표) : 모든 문자 하나와 일치\
+  \\. 은 점을 찾을 때 이용
+* \d : 0123456789 범위의 모든 숫자를 지정한다.    \
+  \[0-9] 숫자를 써서 표현 가능
+* \w : 모든 글자, 숫자, 밑줄(\_)을 지정한다.\
+  \[a-zA-Z] 는 모든 영문 지정\
+  \[^a-zA-Z] 는 영문이 아닌 모든 글자를 지정
+
+### 한글만 찾기
+
+```javascript
+/[ㄱ-ㅎㅏ-ㅣ가-힣]/g // 키로 찾기
+/[\uAC00-\uD7A3]+\ *(?:[\uAC00-\uD7A3]| )*/g // 유니코드로 찾기
+// 한글 음절의 유니코드 범위는 U+AC00에서 U+D7A3
+```
+
+
+
+### E-mail 찾기
+
+```javascript
+/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g
+```
+
+
+
+
+
 ### 1. 정규 표현식 리터럴 (연결된 패턴의 / )
 
 ```javascript
@@ -213,14 +316,7 @@ Copy to Clipboard
 
 아래의 표는 위 스크립트에서 일치를 성공한 후, 반환하는 배열과 업데이트되는 정규 표현식 객체의 속성입니다.
 
-| 객체        | 속성 또는 인덱스                                        | 설명                                                                                                                                                                                                                                                                 | 위 예제에서의 값                                      |
-| --------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------- |
-| `myArray` |                                                  | 일치한 문자열 및 기억한 모든 부분 문자열.                                                                                                                                                                                                                                           | `['dbbd', 'bb', index: 1, input: 'cdbbdbsbz']` |
-| `index`   | 일치한 부분이 주어진 문자열에서 위치한 인덱스. (0부터 시작)              | `1`                                                                                                                                                                                                                                                                |                                                |
-| `input`   | 주어진 원본 문자열.                                      | `'cdbbdbsbz'`                                                                                                                                                                                                                                                      |                                                |
-| `[0]`     | 마지막으로 일치한 부분 문자열.                                | `'dbbd'`                                                                                                                                                                                                                                                           |                                                |
-| `myRe`    | `lastIndex`                                      | 다음 일치를 시작할 인덱스. (g 옵션을 지정한 정규 표현식의 경우에만 설정됩니다. [플래그를 활용한 고급 탐색](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Regular\_Expressions#%ED%94%8C%EB%9E%98%EA%B7%B8%EB%A5%BC\_%ED%99%9C%EC%9A%A9%ED%95%9C\_%EA%B3%A0%EA%B8%89\_%ED%83%90%EC%83%89)을 참고하세요) | `5`                                            |
-| `source`  | 패턴의 텍스트. 정규 표현식이 생성될 때 갱신됩니다. 실행 시점에는 갱신되지 않습니다. | `'d(b+)d'`                                                                                                                                                                                                                                                         |                                                |
+<table><thead><tr><th width="125">객체</th><th width="153">속성 또는 인덱스</th><th width="316">설명</th><th>위 예제에서의 값</th></tr></thead><tbody><tr><td><code>myArray</code></td><td></td><td>일치한 문자열 및 기억한 모든 부분 문자열.</td><td><code>['dbbd', 'bb', index: 1, input: 'cdbbdbsbz']</code></td></tr><tr><td><code>index</code></td><td>일치한 부분이 주어진 문자열에서 위치한 인덱스. (0부터 시작)</td><td><code>1</code></td><td></td></tr><tr><td><code>input</code></td><td>주어진 원본 문자열.</td><td><code>'cdbbdbsbz'</code></td><td></td></tr><tr><td><code>[0]</code></td><td>마지막으로 일치한 부분 문자열.</td><td><code>'dbbd'</code></td><td></td></tr><tr><td><code>myRe</code></td><td><code>lastIndex</code></td><td>다음 일치를 시작할 인덱스. (g 옵션을 지정한 정규 표현식의 경우에만 설정됩니다. <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Regular_Expressions#%ED%94%8C%EB%9E%98%EA%B7%B8%EB%A5%BC_%ED%99%9C%EC%9A%A9%ED%95%9C_%EA%B3%A0%EA%B8%89_%ED%83%90%EC%83%89">플래그를 활용한 고급 탐색</a>을 참고하세요)</td><td><code>5</code></td></tr><tr><td><code>source</code></td><td>패턴의 텍스트. 정규 표현식이 생성될 때 갱신됩니다. 실행 시점에는 갱신되지 않습니다.</td><td><code>'d(b+)d'</code></td><td></td></tr></tbody></table>
 
 위 예제의 두 번째 형태처럼, 정규 표현식 객체를 변수에 대입하지 않고도 사용할 수 있습니다. 하지만, 이러면 매 사용마다 정규 표현식 객체가 새로 생성되며, 업데이트되는 속성에 접근할 수 없습니다. 다음과 같은 코드를 생각해보겠습니다.
 
@@ -251,15 +347,7 @@ Copy to Clipboard
 
 정규 표현식은 전역 탐색이나 대소문자 무시와 같은 특성을 지정하는 플래그를 가질 수 있습니다. 플래그는 단독으로 사용할 수도 있고, 순서에 상관 없이 한꺼번에 여럿을 지정할 수도 있습니다.
 
-| 플래그 | 설명                                                                                                                                                            | 대응하는 속성                                                                                                                                      |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `d` | 부분 문자열 일치에 대해 인덱스 생성.                                                                                                                                         | [`RegExp.prototype.hasIndices` (en-US)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/RegExp/hasIndices) |
-| `g` | 전역 탐색.                                                                                                                                                        | [`RegExp.prototype.global` (en-US)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/RegExp/global)         |
-| `i` | 대소문자를 구분하지 않음.                                                                                                                                                | [`RegExp.prototype.ignoreCase` (en-US)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/RegExp/ignoreCase) |
-| `m` | 여러 줄에 걸쳐 탐색.                                                                                                                                                  | [`RegExp.prototype.multiline` (en-US)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/RegExp/multiline)   |
-| `s` | 개행 문자가 `.`과 일치함.                                                                                                                                              | [`RegExp.prototype.dotAll`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global\_Objects/RegExp/dotAll)                    |
-| `u` | "unicode", 패턴을 유니코드 코드 포인트의 시퀀스로 간주함.                                                                                                                         | [`RegExp.prototype.unicode` (en-US)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/RegExp/unicode)       |
-| `y` | "접착" 탐색, 대상 문자열의 현재 위치에서 탐색을 시작함. [`sticky` (en-US)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/RegExp/sticky)를 참고하세요. | [`RegExp.prototype.sticky` (en-US)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/RegExp/sticky)         |
+<table><thead><tr><th width="112.33333333333331">플래그</th><th width="334">설명</th><th>대응하는 속성</th></tr></thead><tbody><tr><td><code>d</code></td><td>부분 문자열 일치에 대해 인덱스 생성.</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices"><code>RegExp.prototype.hasIndices</code> (en-US)</a></td></tr><tr><td><code>g</code></td><td>전역 탐색.</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global"><code>RegExp.prototype.global</code> (en-US)</a></td></tr><tr><td><code>i</code></td><td>대소문자를 구분하지 않음.</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase"><code>RegExp.prototype.ignoreCase</code> (en-US)</a></td></tr><tr><td><code>m</code></td><td>여러 줄에 걸쳐 탐색.</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline"><code>RegExp.prototype.multiline</code> (en-US)</a></td></tr><tr><td><code>s</code></td><td>개행 문자가 <code>.</code>과 일치함.</td><td><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll"><code>RegExp.prototype.dotAll</code></a></td></tr><tr><td><code>u</code></td><td>"unicode", 패턴을 유니코드 코드 포인트의 시퀀스로 간주함.</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode"><code>RegExp.prototype.unicode</code> (en-US)</a></td></tr><tr><td><code>y</code></td><td>"접착" 탐색, 대상 문자열의 현재 위치에서 탐색을 시작함. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky"><code>sticky</code> (en-US)</a>를 참고하세요.</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky"><code>RegExp.prototype.sticky</code> (en-US)</a></td></tr></tbody></table>
 
 플래그는 다음과 같은 구문으로 정규 표현식에 지정할 수 있습니다.
 
