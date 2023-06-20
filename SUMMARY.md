@@ -10,6 +10,7 @@
   * [Regex 정규 표현식](readme/regex.md)
   * [정보통신(웹)접근성 관련 코딩](readme/undefined-3/README.md)
     * [\<blink> 사용 금지](readme/undefined-3/less-than-blink-greater-than.md)
+    * [접근성 지원 스크립트](readme/undefined-3/undefined.md)
   * [Git 설치와 설정](undefined/git\_cli\_cmd.md)
 * [HTML5](html5/README.md)
   * [🥇 🐱‍🏍 1장. HTML5](html5/1-.-html5.md)
